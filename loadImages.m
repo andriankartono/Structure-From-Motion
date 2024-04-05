@@ -58,7 +58,7 @@ function [ImagesDS, Params, orderedKeys, LoadedI] = loadImages(imagePath, ...
     if loadNow
         for i = 1:nImages
             imageFilePath = ImagesDS.Files{i};
-            LoadedI(imageFilePath) = readimage(ImagesDS, i);
+            LoadedI(imageFilePath) = readimage(ImagesDS, i); % Image is downsampled to speed up calculations
         end
     end
 
