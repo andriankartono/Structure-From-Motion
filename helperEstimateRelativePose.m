@@ -38,7 +38,7 @@ end
 for i = 1:50
     % Estimate the essential matrix.    
     [E, inlierIdx] = estimateEssentialMatrix(matchedPoints1, matchedPoints2,...
-        intrinsics, 'Confidence', 75, 'MaxDistance', 1);
+        intrinsics, 'Confidence', 80, 'MaxDistance', 0.5);
 
     % Make sure we get enough inliers
     if sum(inlierIdx) / numel(inlierIdx) < .3
